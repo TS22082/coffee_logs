@@ -11,6 +11,8 @@ module.exports = {
         email: req.body.email,
         password: req.body.password,
       });
+
+      res.redirect(307, "/auth/login");
     } catch (err) {
       res.stats(401).json(err);
     }

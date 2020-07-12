@@ -1,23 +1,24 @@
 const express = require("express");
 const router = express.Router();
-const authController = require("../controllers/auth-controller");
+const passport = require("../config/passport");
+const { login, register, logout } = require("../controllers/auth-controller");
 
 // Login route
 // Route: http://localhost:3000/auth/login
 // Type: POST
 
-router.post("auth/login", authController.login);
+router.post("/auth/login", passport.authenticate("local"), login);
 
 // Login route
 // Route: http://localhost:3000/auth/register
 // Type: POST
 
-router.post("auth/register", authController.register);
+router.post("/auth/register", register);
 
 // Login route
 // Route: http://localhost:3000/auth/register
 // Type: POST
 
-router.get("auth/register", authController.register);
+router.get("/auth/logout", logout);
 
 module.exports = router;

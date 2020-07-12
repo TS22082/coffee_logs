@@ -37,7 +37,9 @@ const authRoutes = require("./routes/auth-routes.js");
 const clientRoutes = require("./routes/client-routes.js");
 
 // use routes
-app.use(logRoutes, authRoutes, clientRoutes);
+app.use(logRoutes);
+app.use(authRoutes);
+app.use(clientRoutes);
 
 // syncs with database then serves content
 db.sequelize.sync().then(() => {
