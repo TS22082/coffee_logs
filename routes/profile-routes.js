@@ -7,4 +7,6 @@ const {
 
 router.post("/profile/new", createProfile);
 
+router.get("/profile", getProfile);
+
 module.exports = router;
