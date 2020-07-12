@@ -35,11 +35,13 @@ app.use(passport.session());
 const logRoutes = require("./routes/log-routes.js");
 const authRoutes = require("./routes/auth-routes.js");
 const clientRoutes = require("./routes/client-routes.js");
+const profileRoutes = require("./routes/profile-routes.js");
 
 // use routes
 app.use(logRoutes);
 app.use(authRoutes);
 app.use(clientRoutes);
+app.use(profileRoutes);
 
 // syncs with database then serves content
 db.sequelize.sync().then(() => {
