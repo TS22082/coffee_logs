@@ -8,6 +8,10 @@ A coffee diary to record new roasts or flavors.
 
 Taking my coffee game up and want to keep a diary of different roasts and flavors I find.
 
+## Build status
+
+In development
+
 <hr>
 
 ## Packages
