@@ -2,11 +2,11 @@
 
 ## Description
 
-A coffee diary to record new roasts or flavors users find. Inspired by being Introduced to new flavors by Red Bay Coffee.
+A coffee diary to record new roasts or flavors.
 
 ## Inspiration
 
-My girlfriend introduced me to red bay coffee and I was hooked after experimenting with their different roasts. I wanted to start a coffee roast diary to keep track of the new flavors but thought it would be more efficient to make a web app for the purpose instead.
+Taking my coffee game up and want to keep a diary of different roasts and flavors I find.
 
 <hr>
 
