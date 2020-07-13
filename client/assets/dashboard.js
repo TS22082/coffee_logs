@@ -16,6 +16,7 @@ $(document).ready(function () {
         $("#nameInput").val("");
         $("#descriptionInput").val("");
         logInstance.close();
+        resolve("success");
       });
     });
   };
@@ -47,6 +48,8 @@ $(document).ready(function () {
             </div>
           </div>
           `);
+
+          resolve("success");
         });
       });
     });
@@ -58,14 +61,13 @@ $(document).ready(function () {
   const logModal = document.getElementById("newLogModal");
   const logInstance = M.Modal.init(logModal, { dismissible: true });
 
-  renderLogs().then(() => console.log(success));
+  renderLogs();
 
   $("#newLogBtn").on("click", () => logInstance.open());
   $("#logCancel").on("click", () => logInstance.close());
 
   $("#logForm").on("submit", (e) => {
     e.preventDefault();
-    createLog();
-    renderLogs();
+    createLog().then(() => renderLogs());
   });
 });
