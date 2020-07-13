@@ -49,7 +49,7 @@ const loginUser = (userObj) => {
   return new Promise((resolve, reject) => {
     $.ajax({
       type: "POST",
-      url: "/api/login",
+      url: "/auth/login",
       data: userObj,
     }).then(
       (res) => resolve({ msg: "success" }),
@@ -62,7 +62,7 @@ const registerUser = (userObj) => {
   return new Promise((resolve, reject) => {
     $.ajax({
       type: "POST",
-      url: "/api/register",
+      url: "/auth/register",
       data: userObj,
     }).then(
       (res) => resolve(res),
