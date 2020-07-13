@@ -22,4 +22,21 @@ module.exports = {
     req.logout();
     res.redirect("/");
   },
+
+  getUser: async (req, res) => {
+    if (req.user) {
+      try {
+        const user = await db.User.findOne({
+          where: { id: req.user.id },
+          include: [db.Profile, db.Log],
+        });
+
+        res.send({ email: user.email, profile: user.Profile, log: user.Logs });
+      } catch (err) {
+        res.send({ err_msg: err });
+      }
+    } else {
+      res.send({});
+    }
+  },
 };

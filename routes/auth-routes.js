@@ -1,7 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("../config/passport");
-const { login, register, logout } = require("../controllers/auth-controller");
+const {
+  login,
+  register,
+  logout,
+  getUser,
+} = require("../controllers/auth-controller");
 
 // Login route
 // Route: http://localhost:3000/auth/login
@@ -9,15 +14,21 @@ const { login, register, logout } = require("../controllers/auth-controller");
 
 router.post("/auth/login", passport.authenticate("local"), login);
 
-// Login route
+// Register route
 // Route: http://localhost:3000/auth/register
 // Type: POST
 
 router.post("/auth/register", register);
 
-// Login route
+// Get user route
 // Route: http://localhost:3000/auth/register
 // Type: POST
+
+router.get("/auth/user", getUser);
+
+// Logout route
+// Route: http://localhost:3000/auth/register
+// Type: GET
 
 router.get("/auth/logout", logout);
 
