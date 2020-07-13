@@ -31,3 +31,4 @@ In development
 - MaterializeCSS
 - Material icons
 - Google Fonts
+- jQuery
