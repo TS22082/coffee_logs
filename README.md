@@ -14,7 +14,7 @@ In development
 
 <hr>
 
-## Packages
+## Packages (back-end)
 
 - bcryptjs
 - dotenv
@@ -25,3 +25,9 @@ In development
 - passport-local
 - sequelize
 - sequelize-cli
+
+## Libraries (front-end)
+
+- MaterializeCSS
+- Material icons
+- Google Fonts
