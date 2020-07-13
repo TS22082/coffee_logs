@@ -38,10 +38,7 @@ const clientRoutes = require("./routes/client-routes.js");
 const profileRoutes = require("./routes/profile-routes.js");
 
 // use routes
-app.use(logRoutes);
-app.use(authRoutes);
-app.use(clientRoutes);
-app.use(profileRoutes);
+app.use(logRoutes, authRoutes, clientRoutes, profileRoutes);
 
 // syncs with database then serves content
 db.sequelize.sync().then(() => {
