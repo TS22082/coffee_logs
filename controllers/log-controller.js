@@ -1,8 +1,20 @@
-const db = require("./models");
+const db = require("../models");
 
 module.exports = {
   newLog: async (req, res) => {
-    const newLog = await db.Log.create({ ...req.body, UserId: req.user.id });
+    if (req.user) {
+      try {
+        const newLog = await db.Log.create({
+          ...req.body,
+          UserId: req.user.id,
+        });
+        res.send(newLog);
+      } catch (err) {
+        res.send({ err_message: err });
+      }
+    } else {
+      res.redirect("/");
+    }
   },
 
   getUserLogs: async (req, res) => {
