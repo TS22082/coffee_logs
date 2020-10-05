@@ -39,11 +39,16 @@ $(document).ready(function () {
           <div class="row">
             <div class="card brown darken-1">
               <div class="card-content white-text">
-                ${name}
-                <span class="card-title">${company}</span>
-                <br>
-                <p>${roast}</p>
-                <p>${description}</p>
+                <div class="row">
+                  <div class="col s6">
+                    <p class="card-title">${company}</p>
+                    <p>${name} </p>
+                    <p>${roast} </p>
+                  </div>
+                  <div class="col s6">
+                    <p>${description}</p>  
+                  </div>
+                </div>
               </div>
             </div>
           </div>
