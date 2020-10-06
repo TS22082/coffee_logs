@@ -6,7 +6,7 @@ A coffee diary to record new roasts or flavors.
 
 ## Inspiration
 
-Taking my coffee game up and want to keep a diary of different roasts and flavors I find.
+Taking my coffee game up and want to keep a log of different roasts and flavors I find.
 
 ## Build status
 

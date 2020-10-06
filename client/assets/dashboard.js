@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  $(".parallax").parallax();
+
   const createLog = () => {
     return new Promise((resolve, reject) => {
       $.ajax({
